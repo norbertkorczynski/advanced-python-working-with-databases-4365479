@@ -10,7 +10,8 @@
   "editor.matchBrackets": "always",
   "editor.minimap.enabled": false,
   "editor.smoothScrolling": true,
-  "editor.tabSize": 2,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
   "editor.useTabStops": true,
   "emmet.triggerExpansionOnTab": true,
   "explorer.openEditors.visible": 0,
@@ -20,5 +21,10 @@
   "workbench.activityBar.visible": true,
   "workbench.colorTheme": "Visual Studio Dark",
   "workbench.fontAliasing": "antialiased",
-  "workbench.statusBar.visible": true
+  "workbench.statusBar.visible": true,
+  "python.terminal.activateEnvironment": false,
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.envFile": "${workspaceFolder}/mysql-sqlalchemy-workspace",
+  "python.createEnvironment.trigger": "off",
+  "python.defaultInterpreterPath": "${workspaceFolder}/mysql-sqlalchemy-workspace/bin/python"
 }
