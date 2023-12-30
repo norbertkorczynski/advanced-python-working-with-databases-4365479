@@ -8,6 +8,11 @@ FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 ARG NODE_VERSION="none"
 RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
 
+# Install MariaDB client
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get install -y mariadb-client telnet iputils-ping \ 
+    && apt-get clean -y && rm -rf /var/lib/apt/lists/*
+
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
 # COPY requirements.txt /tmp/pip-tmp/
 # RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
